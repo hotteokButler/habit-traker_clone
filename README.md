@@ -1,3 +1,1 @@
 # Clone Habit Tracker
-
-test
