@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul,
+ol,
+li {
+  list-style: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  background: none;
+  vertical-align: middle;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  margin: 0 0 1rem;
+}
+.navBar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1.5rem 1rem;
+  line-height: 2.5rem;
+  font-size: 2.5rem;
+  background-color: #fff7ed;
 }
-
-.App-link {
-  color: #61dafb;
+.navBar_logo {
+  padding: 0 0.1rem 0 1rem;
+  color: #b183cc;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navBar_title {
+  padding: 0 1rem;
+}
+.navBar_countBox {
+  width: 1.5rem;
+  padding: 0 0.5rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #fff;
+  background-color: #b183cc;
+}
+.habit_input-box {
+  padding: 0.5rem 1.5rem;
+}
+.habit_input {
+  width: 60%;
+  padding: 0.5rem;
+  margin: 0 10px 0 0;
+}
+.habit_inputBtn {
+  padding: 0.3em;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #b183cc;
+}
+.habit {
+  font-size: 2.5rem;
+  padding: 0.5em;
+}
+.habit-count {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 0.5em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 2.5rem;
+  color: #fcfcfc;
+  background-color: #a4e1ae;
+  font-size: 2rem;
+}
+.habit-button {
+  font-size: 2.5rem;
+  margin: 0 0.2em;
+}
+.habit-button:hover {
+  opacity: 0.7;
+}
+.habit-increase,
+.habit-decrease {
+  color: #ffcc00;
+}
+.habit-delete {
+  font-size: 2.1rem;
+  color: #bf380e;
+}
+.habit_reset {
+  margin: 0 1rem;
+}
+.habit_resetBtn {
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: #b183cc;
 }
