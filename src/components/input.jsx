@@ -1,25 +1,21 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class Input extends Component {
-  onAddHabit = (event) => {
-    this.props.onAddHabit(event);
+class Input extends PureComponent {
+  formRef = React.createRef();
+  inputRef = React.createRef();
+
+  onSubmit = (event) => {
+    event.preventDefault();
+    const name = this.inputRef.current.value;
+    name && this.props.onAdd(name);
+    // this.inputRef.current.value = '';
+    this.formRef.current.reset();
   };
-  onChangeHabit = (event) => {
-    const newValue = event.target.value;
-    this.props.onChangeHabit(newValue);
-  };
+
   render() {
     return (
-      <form action="" className="habit_input-box" onSubmit={this.onAddHabit}>
-        <input
-          type="text"
-          placeholder="Habit"
-          onChange={this.onChangeHabit}
-          value={this.props.value}
-          autoFocus
-          id="habitInput"
-          className="habit_input"
-        />
+      <form action="" ref={this.formRef} className="habit_input-box" onSubmit={this.onSubmit}>
+        <input type="text" ref={this.inputRef} placeholder="Habit" className="habit_input" />
         <button className="habit_inputBtn">Add</button>
       </form>
     );

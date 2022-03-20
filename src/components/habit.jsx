@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class Habit extends Component {
+class Habit extends PureComponent {
   //onClick={()=>this.props.onIncrement(this.props.habit)} 간소화 시켜주기위해 콜백으로 함수를 다시 묶어준것
   handleIncrement = () => {
     this.props.onIncrement(this.props.habit);
@@ -19,12 +19,7 @@ class Habit extends Component {
       <li className="habit">
         <span className="habit-name">{name}</span>
         <span className="habit-count">{count}</span>
-        <button
-          className="habit-button habit-increase"
-          onClick={() => {
-            this.props.onIncrement(this.props.habit);
-          }}
-        >
+        <button className="habit-button habit-increase" onClick={this.handleIncrement}>
           <i className="fa-solid fa-square-plus"></i>
         </button>
         <button className="habit-button habit-decrease" onClick={this.handleDecrement}>
